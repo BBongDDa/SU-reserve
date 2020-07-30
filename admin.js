@@ -6,6 +6,8 @@ const number2 = document.getElementById("number2");
 const increase2 = document.getElementById("increase2");
 const decrease2 = document.getElementById("decrease2");
 
+const submit = document.getElementById("submit");
+
 increase.onclick = () => {
   const current = parseInt(number.innerText, 10);
   number.innerText = current + 1;
@@ -36,5 +38,9 @@ increase2.onclick = () => {
     else{
         return 0;
     }
+  };
+
+  submit.onclick = () => {
+    alert('적용되었습니다');
   };
   
