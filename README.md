@@ -1,3 +1,3 @@
 # SU-reserve
 
-[SU-reserve](https://su-reserve.cf)
+[SU-reserve](http://su-reserve.cf)
