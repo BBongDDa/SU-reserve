@@ -14,7 +14,7 @@
     <style>
         body{
             background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./syu.jpg');
-            background-size: auto;
+            background-size: cover;
             padding-top: 1rem;
         }
         #mainNav{
@@ -38,7 +38,13 @@
             padding: 4%;
             margin: 1%;
         }
-        @media ( max-width: 500px ) {
+        @media ( max-width: 1080px ) {
+            body{
+                background-size: auto;
+            }
+            section{
+                width: 88%;
+            }
             main{
             flex-direction: column;
             flex-wrap: wrap;
@@ -46,7 +52,7 @@
             align-content: space-around;
             }
             .logomain{
-                width: 150px;
+                width: 135px;
             }
             section{
                 min-width: 300px;
@@ -103,7 +109,7 @@
         <br>
         <table class="t2">
             <tr>
-                <td style="width: 170px; font-size: 1rem;">남학생 수면실</td><td style="width: 110px; font-size: 1rem;" >이용가능 *석</td>
+                <td style="width: 170px; font-size: 1rem;">남학생 수면실</td><td style="width: 110px; font-size: 1rem;" >이용가능 <span id="number2">0</span>석</td>
             </tr>
             <tr>
                 <td style="width: 170px; font-size: 1rem;">여학생 수면실</td><td style="width: 110px; font-size: 1rem;" >이용가능 *석</td>
@@ -111,5 +117,6 @@
         </table>
     </section>
 </main>
+<script src="admin.js" defer></script>
 </body>
 </html>
