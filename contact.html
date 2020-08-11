@@ -8,8 +8,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <link href="css/scrolling-nav.css" rel="stylesheet">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <title>SU-reserve</title>
     
@@ -40,6 +38,7 @@
             padding: 4%;
             margin: 1%;
             margin-bottom: 1.7rem;
+            text-align: center;
         }
         @media ( max-width: 1080px ) {
             body{
@@ -59,9 +58,8 @@
                 align-items: center;
                 width: 90%;
                 min-width: 310px;
-                padding: 2.5%;
+                padding: 1.5%;
                 margin: 1%;
-                margin-bottom: 1.7rem;
             }
             .name1{
                 font-size: 1.9vh;
@@ -79,14 +77,14 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-blue" id="mainNav" > 
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#top" style="font-size: 2.5vh; font-family: Noto Sans KR;"> <img src='./syu_logo.png' class="logomain" style="max-width:14%; height:auto;"><b class="name1">&nbsp; SU-reserve</b><b class="name2" style="font-size: small;"> 현황</b></a> 
+            <a class="navbar-brand js-scroll-trigger" href="#top" style="font-size: 2.5vh; font-family: Noto Sans KR;"> <img src='./syu_logo.png' class="logomain" style="max-width:14%; height:auto;"><b class="name1">&nbsp; SU-reserve</b><b class="name2" style="font-size: small;"> 문의</b></a> 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button> 
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="./contact.html">&nbsp; 이용문의 </a>
+                <a class="nav-link js-scroll-trigger" href="#top">&nbsp; 이용문의 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#services">&nbsp; FAQ </a>
@@ -101,29 +99,33 @@
     <br>
     <br>
     <main>
-    <section>
-        <h1 style="font-size: 1.2rem;">총학생회 보조배터리 대여현황</h1>
-        <br>
-        <table>
-            <tr >
-                <th style="width: 170px; font-size: 1rem;">TYPE</th><th style="width: 110px; font-size: 1rem;">대수</th>
-            </tr>
-        </table>
-    </section>
-    <section class="sec2">
-        <h1 style="font-size: 1.2rem;">총학생회 수면실 이용현황</h1>
-        <br>
-        <table class="t2">
-            <tr>
-                <td style="width: 170px; font-size: 1rem;">남학생 수면실</td><td style="width: 110px; font-size: 1rem;" >이용가능 <span id="number2">0</span>석</td>
-            </tr>
-            <tr>
-                <td style="width: 170px; font-size: 1rem;">여학생 수면실</td><td style="width: 110px; font-size: 1rem;" >이용가능 *석</td>
-            </tr>
-        </table>
-    </section>
+        <section id="contact">
+            <p style="font-style: Source Sans Pro; font-weight: 500; font-size: 1.5rem; text-align: center;">문의사항을 작성하세요 &#x1F60A;</p>
+            <br>
+            <form
+            action="https://formspree.io/xoqkbwry"
+            method="POST"
+            >
+            <label>
+              이름 :
+              <input style="margin: 3%;" type="text" name="name">
+            </label>
+            <label>
+              Email:
+              <input style="margin: 3%;" type="email" name="_replyto">
+            </label>
+            <br>
+            <br>
+            <label>
+              문의사항:
+              <textarea style="margin: 3%; width: 250px; height: 100px;" name="message"></textarea>
+            </label>
+            <br>
+            <br>
+            <input class="btn btn-secondary" type="submit" value="Send">
+            </form>
+            </section>
 </main>
-<script src="admin.js" defer></script>
 </body>
 <footer style="position: absolute; bottom: 0; margin-bottom: 1.3rem; width:100%; height:100px; text-align: center;">
     <p style="color: white; font-size: 0.9rem;" >Copyright &copy; SU-reserve 2020</p>
